@@ -1,5 +1,13 @@
 import history from "../utils/history.js";
 
+export function changeTab(tab){
+  return {
+  	type: "selectNav/switch_tab",
+  	payload: {
+  		tab: tab
+  	}
+  }
+}
 
 export function showAllNew(val){
   return {

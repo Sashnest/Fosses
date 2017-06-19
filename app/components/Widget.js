@@ -9,13 +9,14 @@ export default class Widget extends React.Component{
     return(
       <div className='container-fluid'>
         <Row className='widget'>
-          <Col xs={12} md={12} md={4} lg={4}>
+          <Col xsHidden smHidden mdHidden lg={1}></Col>
+          <Col xs={12} md={12} md={4} lg={3}>
             <span className="widget-title">TEXT WIDGET</span>
             <span className="text-footer"><br/>Donec sed adio dui. Nulla vitae elit libero,
               a pharetra augue. Nullam id dolor id nibh ultricies
             </span>
           </Col>
-          <Col xs={12} md={12} md={4} lg={4}>
+          <Col xs={12} md={12} md={4} lg={3}>
             <span className="widget-title"> TWITTER WIDGET</span>
             <div className="text-footer">
               <span className="widget-text" >@ericafustero </span>
@@ -36,8 +37,11 @@ export default class Widget extends React.Component{
               <a href="#"><img src="img/f4.jpg"/></a>
               <a href="#"><img src="img/f5.jpg"/></a>
               <a href="#"><img src="img/f6.jpg"/></a>
+              <a href="#"><img src="img/f1.jpg"/></a>
+              <a href="#"><img src="img/f2.jpg"/></a>
             </div>
           </Col>
+          <Col xsHidden smHidden mdHidden lg={1}></Col>
         </Row>
        </div>
     )

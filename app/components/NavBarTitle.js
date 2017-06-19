@@ -17,25 +17,27 @@ export default class NavBarTitle extends React.Component{
                     <Navbar.Header>
                       <Navbar.Toggle/>
                     </Navbar.Header>
-                    <Navbar.Collapse>
+                    <Navbar.Collapse className='wraper-collapse' >
+                      <Row>
                       <Nav>
-                        <NavItem eventKey={1} href="#">Home</NavItem>
-                        <NavItem eventKey={2} href="#">Products</NavItem>
-                        <NavItem eventKey={2} href="#">About</NavItem>
-                        <NavItem eventKey={2} href="#">Pages</NavItem>
-                        <NavItem eventKey={2} href="#">Blog</NavItem>
-                        <NavItem eventKey={2} href="#">Contact</NavItem>
+                        <NavItem className='nav-i'  href="#">Home</NavItem>
+                        <NavItem className='nav-i'  href="#">Products</NavItem>
+                        <NavItem className='nav-i' href="#">About</NavItem>
+                        <NavItem className='nav-i'  href="#">Pages</NavItem>
+                        <NavItem className='nav-i'  href="#">Blog</NavItem>
+                        <NavItem className='nav-i item' href="#">Contact</NavItem>
                       </Nav>
-                      <Nav pullRight>
-                        <NavItem eventKey={1} href="#">
-                          <Glyphicon glyph="star-o" />
+                      <Nav className='right'>
+                        <NavItem className='nav-i' href="#">
+                          <i className="fa fa-star-o"/>
                           <Label bsStyle="default">30</Label>
                         </NavItem>
-                        <NavItem eventKey={2} href="#">
-                          <Glyphicon glyph="cart-arrow-down"/>
+                        <NavItem className='nav-i item' href="#">
+                          <i className="fa fa-cart-arrow-down"/>
                           <Label bsStyle="success">0</Label>
                         </NavItem>
                       </Nav>
+                    </Row>
                     </Navbar.Collapse>
                   </Navbar>
                 </Row>

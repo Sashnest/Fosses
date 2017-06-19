@@ -1,4 +1,5 @@
 const initialState = {
+  tab:'pink',
   newfoses:'closeNew',
   bestFoses:'closeBest'
 }
@@ -20,6 +21,10 @@ const Reduser = (state = initialState, action) => {
     case "closeBest/NavTabsContentBest":
 		return Object.assign({}, state, {
 			bestFoses: action.payload.bestFoses
+		})
+    case "selectNav/switch_tab":
+		return Object.assign({}, state, {
+			tab: action.payload.tab
 		})
   }
 	return state;
