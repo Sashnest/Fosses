@@ -1,26 +1,58 @@
 const initialState = {
   tab:'pink',
-  newfoses:'closeNew',
-  bestFoses:'closeBest'
+  newPrada:'closeNewPrada',
+  bestPrada:'closeBestPrada',
+  newPink:'closeNewPink',
+  bestPink:'closeBestPink',
+  newMellow:'closeNewMellow',
+  bestMellow:'closeBestMellow',
+  newField:'closeNewField',
+  bestField:'closeBestField',
+  newCasadie:'closeNewCasadie',
+  bestCasadie:'closeBestCasadie',
 }
 
 const Reduser = (state = initialState, action) => {
 	switch(action.type){
-		case 'showNew/NavTabsContentNew':
+    case 'prada/ContentNewPrada':
 		return Object.assign({}, state, {
-			newfoses: action.payload.newfoses
+			newPrada: action.payload.newPrada
 		})
-    case "closeNew/NavTabsContentNew":
+    case 'prada/ContentBestPrada':
 		return Object.assign({}, state, {
-			newfoses: action.payload.newfoses
+			bestPrada: action.payload.bestPrada
 		})
-    case "showBest/NavTabsContentBest":
+    case 'pink/ContentNewPink':
 		return Object.assign({}, state, {
-			bestFoses: action.payload.bestFoses
+			newPink: action.payload.newPink
 		})
-    case "closeBest/NavTabsContentBest":
+    case 'pink/ContentBestPink':
 		return Object.assign({}, state, {
-			bestFoses: action.payload.bestFoses
+			bestPink: action.payload.bestPink
+		})
+    case 'mellow/ContentNewMellow':
+		return Object.assign({}, state, {
+			newMellow: action.payload.newMellow
+		})
+    case 'mellow/ContentBestMellow':
+		return Object.assign({}, state, {
+			bestMellow: action.payload.bestMellow
+		})
+    case 'field/ContentNewField':
+		return Object.assign({}, state, {
+			newField: action.payload.newField
+		})
+    case 'field/ContentBestField':
+		return Object.assign({}, state, {
+			bestField: action.payload.bestField
+		})
+    case 'casadie/ContentNewCasadie':
+		return Object.assign({}, state, {
+			newCasadie: action.payload.newCasadie
+		})
+    case 'casadie/ContentBestCasadie':
+		return Object.assign({}, state, {
+			bestCasadie: action.payload.bestCasadie
 		})
     case "selectNav/switch_tab":
 		return Object.assign({}, state, {

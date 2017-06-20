@@ -8,36 +8,83 @@ export function changeTab(tab){
   	}
   }
 }
-
-export function showAllNew(val){
+export function pradaShowCloseNew(val){
   return {
-  	type: "showNew/NavTabsContentNew",
+  	type: 'prada/ContentNewPrada',
   	payload: {
-  		newfoses: val
+  		newPrada: val
   	}
   }
 }
-export function CloseNew(val){
+export function pradaShowCloseBest(val){
   return {
-  	type: "closeNew/NavTabsContentNew",
+  	type: 'prada/ContentBestPrada',
   	payload: {
-  		newfoses: val
+  		bestPrada: val
   	}
   }
 }
-export function showBest(val){
+export function pinkShowCloseNew(val){
   return {
-  	type: "showBest/NavTabsContentBest",
+  	type: 'pink/ContentNewPink',
   	payload: {
-  		bestFoses: val
+  		newPink: val
   	}
   }
 }
-export function CloseBest(val){
+export function pinkShowCloseBest(val){
   return {
-  	type: "closeBest/NavTabsContentBest",
+  	type: 'pink/ContentBestPink',
   	payload: {
-  		bestFoses: val
+  		bestPink: val
+  	}
+  }
+}
+export function mellowShowCloseNew(val){
+  return {
+  	type: 'mellow/ContentNewMellow',
+  	payload: {
+  		newMellow: val
+  	}
+  }
+}
+export function mellowShowCloseBest(val){
+  return {
+  	type: 'mellow/ContentBestMellow',
+  	payload: {
+  		bestMellow: val
+  	}
+  }
+}
+export function fieldShowCloseNew(val){
+  return {
+  	type: 'field/ContentNewField',
+  	payload: {
+  		newField: val
+  	}
+  }
+}
+export function fieldShowCloseBest(val){
+  return {
+  	type: 'field/ContentBestField',
+  	payload: {
+  		bestField: val
+  	}
+  }
+}
+export function casadieShowCloseNew(val){
+  return {
+  	type: 'casadie/ContentNewCasadie',
+  	payload: {
+  		newCasadie: val
+  	}
+  }
+}
+export function casadieShowCloseBest(val){
+  return {
+  	type: 'casadie/ContentBestCasadie',
+  	payload: {
+  		bestCasadie: val
   	}
   }
 }

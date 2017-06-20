@@ -19,7 +19,7 @@ export default class Collection extends React.Component{
               </Row>
             </Col>
             <Col xs={12} sm={12} md={5} lg={5}>
-              <div>
+              <div className='top-collection-left'>
                 <div className="top-collection-price">
         					<span className="top-collection-price-sales">$145,99</span>
         				</div>

@@ -18,7 +18,7 @@ export default class NavBarTitle extends React.Component{
                       <Navbar.Toggle/>
                     </Navbar.Header>
                     <Navbar.Collapse className='wraper-collapse' >
-                      <Row>
+                      <Row className='nav-small'>
                       <Nav>
                         <NavItem className='nav-i'  href="#">Home</NavItem>
                         <NavItem className='nav-i'  href="#">Products</NavItem>

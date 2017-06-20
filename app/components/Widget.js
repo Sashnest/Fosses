@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Col, Row} from 'react-bootstrap';
 
-
 export default class Widget extends React.Component{
 
   render(){
@@ -39,6 +38,8 @@ export default class Widget extends React.Component{
               <a href="#"><img src="img/f6.jpg"/></a>
               <a href="#"><img src="img/f1.jpg"/></a>
               <a href="#"><img src="img/f2.jpg"/></a>
+              <a href="#"><img className='f9'src="img/f2.jpg"/></a>
+              <a href="#"><img className='f10'src="img/f2.jpg"/></a>
             </div>
           </Col>
           <Col xsHidden smHidden mdHidden lg={1}></Col>

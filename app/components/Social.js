@@ -9,7 +9,7 @@ export default class Social extends React.Component{
       <div className='container-fluid' >
         <Row className='center-footer'>
           <Col xsHidden smHidden mdHidden lg={1}></Col>
-          <Col xs={12} sm={12} md={3} lg={2} className="wraper-blog-first">
+          <Col xs={12} sm={6} md={3} lg={2} className="wraper-blog-first">
             <FormGroup>
               <InputGroup>
                 <FormControl type="text" placeholder="Enter email for newsletter..."/>
@@ -19,8 +19,8 @@ export default class Social extends React.Component{
               </InputGroup>
             </FormGroup>
           </Col>
-          <Col xs={12} sm={12} md={6} lg={5} className="wraper-blog-sekond"></Col>
-          <Col xs={12} sm={12} md={3} lg={3} className="wraper-blog-third">
+          <Col xsHidden smHidden md={6} lg={5} className="wraper-blog-sekond"></Col>
+          <Col xs={12} sm={6} md={3} lg={3} className="wraper-blog-third">
             <div className=" footer-center-social">
               <a href="https://www.facebook.com/"><i className="fa fa-facebook"></i></a>
               <a href="https://twitter.com/"><i className="fa fa-twitter"></i></a>

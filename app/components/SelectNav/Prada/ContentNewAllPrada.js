@@ -4,7 +4,7 @@ import {Grid, Row, Col,Thumbnail, Button} from 'react-bootstrap';
 import {connect} from 'react-redux';
 import history from '../../../utils/history.js';
 
-import {CloseNew} from '../../../actions/Actions.js';
+import {pradaShowCloseNew} from '../../../actions/Actions.js';
 
 class ContentNewAllPrada extends React.Component{
   constructor(props){
@@ -13,8 +13,7 @@ class ContentNewAllPrada extends React.Component{
   }
 
 CloseNew(val){
-  console.log(val);
-  this.props.dispatch(CloseNew(val));
+  this.props.dispatch(pradaShowCloseNew(val));
 }
 
   render(){
@@ -75,8 +74,10 @@ CloseNew(val){
             <Thumbnail href="#" alt="171x180" src="./img/A3.jpg" />
           </Col>
         </Row>
-        <Button onClick={this.CloseNew.bind(this, 'closeNew')}>Close All</Button>
-       </div>
+        <div className='close-shose'>
+          <Button  onClick={this.CloseNew.bind(this, 'closeNewPrada')}>Close All</Button>
+        </div>
+      </div>
     )
   }
 }

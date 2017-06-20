@@ -4,7 +4,7 @@ import {Grid, Row, Col,Thumbnail, Button} from 'react-bootstrap';
 import {connect} from 'react-redux';
 import history from '../../../utils/history.js';
 
-import {CloseNew} from '../../../actions/Actions.js';
+import {fieldShowCloseNew} from '../../../actions/Actions.js';
 
 class ContentNewAllField extends React.Component{
   constructor(props){
@@ -14,7 +14,7 @@ class ContentNewAllField extends React.Component{
 
 CloseNew(val){
   console.log(val);
-  this.props.dispatch(CloseNew(val));
+  this.props.dispatch(fieldShowCloseNew(val));
 }
 
   render(){
@@ -75,8 +75,10 @@ CloseNew(val){
             <Thumbnail href="#" alt="171x180" src="./img/A2.jpg" />
           </Col>
         </Row>
-        <Button onClick={this.CloseNew.bind(this, 'closeNew')}>Close All</Button>
-       </div>
+        <div className='close-shose'>
+          <Button  onClick={this.CloseNew.bind(this, 'closeNewField')}>Close All</Button>
+        </div>
+      </div>
     )
   }
 }

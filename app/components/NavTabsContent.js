@@ -44,24 +44,3 @@ class NavTabsContent extends React.Component{
    		projectReducer: store
    	}
    })(NavTabsContent);
-
-
-
-
-   // import TabsContentNewAll from './TabsContentNewAll.js';
-   // import TabsContentNewStart from './TabsContentNewStart.js';
-  //  {
-  //    (() => {
-  //      switch(this.props.projectReducer.newfoses){
-  //        case "closeNew":
-  //          return <TabsContentNewStart/>;
-  //        case "showNew":
-  //          return (
-  //            <div>
-  //               <TabsContentNewStart/>
-  //               <TabsContentNewAll/>
-  //             </div>
-  //           )
-  //         }
-  //       })()
-  //     }

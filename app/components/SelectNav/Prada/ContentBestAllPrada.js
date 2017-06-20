@@ -4,17 +4,17 @@ import {Grid, Row, Col,Thumbnail, Button} from 'react-bootstrap';
 import {connect} from 'react-redux';
 import history from '../../../utils/history.js';
 
-import {CloseNew} from '../../../actions/Actions.js';
+import {pradaShowCloseBest} from '../../../actions/Actions.js';
 
 class ContentBestAllPrada extends React.Component{
   constructor(props){
     super(props);
-    this.CloseNew = this.CloseNew.bind(this);
+    this.CloseBest = this.CloseBest.bind(this);
   }
 
-CloseNew(val){
+CloseBest(val){
   console.log(val);
-  this.props.dispatch(CloseNew(val));
+  this.props.dispatch(pradaShowCloseBest(val));
 }
 
   render(){
@@ -75,7 +75,9 @@ CloseNew(val){
             <Thumbnail href="#" alt="171x180" src="./img/A3.jpg" />
           </Col>
         </Row>
-        <Button onClick={this.CloseNew.bind(this, 'closeNew')}>Close All</Button>
+        <div className='close-shose'>
+          <Button  onClick={this.CloseBest.bind(this, 'closeBestPrada')}>Close All</Button>
+        </div>
        </div>
     )
   }

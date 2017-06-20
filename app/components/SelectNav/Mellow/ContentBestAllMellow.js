@@ -4,17 +4,17 @@ import {Grid, Row, Col,Thumbnail, Button} from 'react-bootstrap';
 import {connect} from 'react-redux';
 import history from '../../../utils/history.js';
 
-import {CloseNew} from '../../../actions/Actions.js';
+import {mellowShowCloseBest} from '../../../actions/Actions.js';
 
 class ContentBestAllMellow extends React.Component{
   constructor(props){
     super(props);
-    this.CloseNew = this.CloseNew.bind(this);
+    this.CloseBest = this.CloseBest.bind(this);
   }
 
-CloseNew(val){
+CloseBest(val){
   console.log(val);
-  this.props.dispatch(CloseNew(val));
+  this.props.dispatch(mellowShowCloseBest(val));
 }
 
   render(){
@@ -75,8 +75,10 @@ CloseNew(val){
             <Thumbnail href="#" alt="171x180" src="./img/A5.jpg" />
           </Col>
         </Row>
-        <Button onClick={this.CloseNew.bind(this, 'closeNew')}>Close All</Button>
-       </div>
+        <div className='close-shose'>
+          <Button  onClick={this.CloseBest.bind(this, 'closeBestMellow')}>Close All</Button>
+        </div>
+      </div>
     )
   }
 }

@@ -4,7 +4,7 @@ import {Grid, Row, Col,Thumbnail, Button} from 'react-bootstrap';
 import {connect} from 'react-redux';
 import history from '../../../utils/history.js';
 
-import {CloseNew} from '../../../actions/Actions.js';
+import {casadieShowCloseNew} from '../../../actions/Actions.js';
 
 class ContentBestAllCasadei extends React.Component{
   constructor(props){
@@ -14,7 +14,7 @@ class ContentBestAllCasadei extends React.Component{
 
 CloseNew(val){
   console.log(val);
-  this.props.dispatch(CloseNew(val));
+  this.props.dispatch(casadieShowCloseNew(val));
 }
 
   render(){
@@ -75,7 +75,9 @@ CloseNew(val){
             <Thumbnail href="#" alt="171x180" src="./img/A4.jpg" />
           </Col>
         </Row>
-        <Button onClick={this.CloseNew.bind(this, 'closeNew')}>Close All</Button>
+        <div className='close-shose'>
+          <Button  onClick={this.CloseNew.bind(this, 'closeNewCasadie')}>Close All</Button>
+        </div>
        </div>
     )
   }

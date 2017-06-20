@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import { Button, ButtonToolbar, NavDropdown, Nav, NavItem, MenuItem,Navbar, Grid, Row, Col,FormGroup, InputGroup,FormControl, Glyphicon,Label } from 'react-bootstrap';
+
 import {Provider} from "react-redux";
 import store from "../store/store.js";
 import {Router} from "react-router";
@@ -18,10 +18,6 @@ import Social from './Social.js';
 import Footer from './Footer.js';
 
 
-
-// import history from "../utils/history.js";
-
-
 class App extends React.Component{
 	constructor(props){
 		super(props);
@@ -33,10 +29,10 @@ class App extends React.Component{
 				<Logo/>
 				<NavBarTitle/>
 				<Collection/>
-				<NavTabs/>{/* черный слайдер центр */}
+				<NavTabs/>
 				<SlideShow/>
 			 	<NavTabsContent/>
-				<BlogNews/>{/*Блок новостей серые кубики*/}
+				<BlogNews/>
 				<Widget/>
 				<Social/>{/*mail and social*/}
 				<Footer/>{/*Footer*/}
@@ -48,17 +44,10 @@ class App extends React.Component{
 ReactDOM.render((
 	<Provider store={store}>
    <App/>
-	 </Provider>
-// {/* <Provider store={store}>
-// 	<Router history={history}> */}
-// 			<Route exact={true} path="/" component={Enter}  />
+	</Provider>
 ), document.getElementById("app"));
 
 
-
-
-
-
-
-// // import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-// // //import injectTapEventPlugin from 'react-tap-event-plugin';
+// {/* <Provider store={store}>
+// 	<Router history={history}> */}
+// 			<Route exact={true} path="/" component={Enter}  />

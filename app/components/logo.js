@@ -28,14 +28,3 @@ export default class Logo extends React.Component{
      )
    }
  }
-
-{/* <Grid className='wraper-logo'></Grid>
-
-<FormGroup>
-  <InputGroup>
-   <FormControl type="text" placeholder="Search..."/>
-   <InputGroup.Addon>
-     <Glyphicon glyph="search"/>
-   </InputGroup.Addon>
- </InputGroup>
-</FormGroup> */}

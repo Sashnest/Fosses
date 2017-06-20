@@ -4,8 +4,7 @@ import {Grid, Row, Col, Thumbnail, Button} from 'react-bootstrap';
 import {connect} from 'react-redux';
 import history from "../../../utils/history.js";
 
-import {showAllNew, CloseNew} from '../../../actions/Actions.js';
-// import TabsContentBest from '../../TabsContentBest.js';
+import {mellowShowCloseBest} from '../../../actions/Actions.js';
 import ContentBestStartMellow from '../Mellow/ContentBestStartMellow.js';
 import ContentBestAllMellow from '../Mellow/ContentBestAllMellow.js';
 
@@ -13,32 +12,30 @@ import ContentBestAllMellow from '../Mellow/ContentBestAllMellow.js';
 class ContentBestTitleMellow extends React.Component{
   constructor(props){
     super(props);
-    this.showNew = this.showNew.bind(this);
-    this.CloseNew = this.CloseNew.bind(this);
+    this.showBest = this.showBest.bind(this);
   }
-  showNew(val){
-    this.props.dispatch(showAllNew(val));
+  showBest(val){
+    this.props.dispatch(mellowShowCloseBest(val));
   }
-  CloseNew(val){
-    console.log(val);
-    this.props.dispatch(CloseNew(val));
-  }
+
   render() {
     return (
       <div className='container-fluid'>
           <Row className="center">
-            <Col xsHidden mdHidden mdHidden lg={1}></Col>
-            <Col xs={12} md={12} md={12} lg={10}>
+            <Col xsHidden smHidden mdHidden lg={1}></Col>
+            <Col xs={12} sm={12} md={12} lg={10}>
               <Row>
                 <div className='center'>
                   <span>Best sellers of month</span>
-                  <Button onClick={this.showNew.bind(this,'showNew')}>Show All</Button>
+                  <div className='show-shose'>
+                    <Button  onClick={this.showBest.bind(this,'showBestMellow')}>Show All</Button>
+                  </div>
                     {
                     (() => {
-                      switch(this.props.projectReducer.newfoses) {
-                        case "closeNew":
+                      switch(this.props.projectReducer.bestMellow) {
+                        case "closeBestMellow":
                            return <ContentBestStartMellow/>;
-                        case "showNew":
+                        case "showBestMellow":
                            return (
                              <div>
                                <ContentBestStartMellow/>
@@ -51,7 +48,7 @@ class ContentBestTitleMellow extends React.Component{
                 </div>
               </Row>
             </Col>
-            <Col xsHidden mdHidden mdHidden lg={1}></Col>
+            <Col xsHidden smHidden mdHidden lg={1}></Col>
           </Row>
       </div>
       )
@@ -62,28 +59,3 @@ class ContentBestTitleMellow extends React.Component{
   		projectReducer: store
   	}
   })(ContentBestTitleMellow);
-
-
-
-
-
-  //
-  // <div className='center'>
-  //   <span>New arrivals on FooseShoes</span>
-  //   <Button onClick={this.showNew.bind(this,'showNew')}>Show All</Button>
-  //     {
-  //     (() => {
-  //       switch(this.props.projectReducer.newfoses) {
-  //         case "closeNew":
-  //            return <TabsContentNewStart/>;
-  //         case "showNew":
-  //            return (
-  //              <div>
-  //                <TabsContentNewStart/>
-  //                <TabsContentNewAll/>
-  //              </div>
-  //            )
-  //       }
-  //     })()
-  //   }
-  // </div>

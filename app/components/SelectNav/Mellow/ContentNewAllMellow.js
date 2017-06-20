@@ -4,7 +4,7 @@ import {Grid, Row, Col,Thumbnail, Button} from 'react-bootstrap';
 import {connect} from 'react-redux';
 import history from '../../../utils/history.js';
 
-import {CloseNew} from '../../../actions/Actions.js';
+import {mellowShowCloseNew} from '../../../actions/Actions.js';
 
 class ContentNewAllMellow extends React.Component{
   constructor(props){
@@ -14,7 +14,7 @@ class ContentNewAllMellow extends React.Component{
 
 CloseNew(val){
   console.log(val);
-  this.props.dispatch(CloseNew(val));
+  this.props.dispatch(mellowShowCloseNew(val));
 }
 
   render(){
@@ -75,8 +75,10 @@ CloseNew(val){
             <Thumbnail href="#" alt="171x180" src="./img/A5.jpg" />
           </Col>
         </Row>
-        <Button onClick={this.CloseNew.bind(this, 'closeNew')}>Close All</Button>
-       </div>
+        <div className='close-shose'>
+          <Button  onClick={this.CloseNew.bind(this, 'closeNewMellow')}>Close All</Button>
+        </div>
+      </div>
     )
   }
 }
